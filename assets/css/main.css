@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&amp;family=Roboto+Condensed&amp;display=swap');
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    font: 400 16px/1.8 'Roboto Condensed', sans-serif;
+    color: #999;
+    overflow-x: hidden;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+  some prestyling css
+*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #fff;
+    font-weight: 300;
+}
+
+a {
+    color:inherit;
+}
+a:link, 
+a:visited, 
+a:hover, 
+a:active {
+    text-decoration: none;
+}
+
+/* 
+   loading view
+*/
+
+.loadingview {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loaded {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+/*
+ aside view
+*/
+.aside {
+    float: left;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: #000;
+    bottom: 0;
+    z-index: 999;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    padding: 0 10px;
+    max-width: 300px;
+    box-shadow: 0px 3px 7px rgba(0,0,0,0.1);
+    width: 20%;
+    /* border-right: 1px solid rgba(238, 238, 238, .2); */
+    overflow: auto;
+    background-color: #000;
+}
+.nav-wrapper {
+    height: 100%;
+}
+.profile--wrapper img { 
+    height: 110px;
+    width: 110px;
+    object-fit: cover;
+}
+.profile--wrapper__name{
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.9;
+    margin: 0 auto;
+    max-width:80%;
+}
+.nav-link{ 
+    position: relative;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.nav-wrapper .navbar-toggler {
+    position: fixed;
+    right: 15px;
+    z-index: 20;
+    top: 15px;
+    padding: 0;
+    display: none;
+    background: #000;
+    border-radius: 50%;
+}
+.navbar-nav .nav-link:hover, .navbar-nav .active .nav-link {
+    color: #fff;
+    /* background: rgba(255, 255, 255, .1); */
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.aside-footer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-self: flex-end;
+    padding: 15px;
+    width: 100%;
+}
+
+
+.aside-footer a {
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: block;
+}
+/*
+    header 
+*/
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.hamRotate.active {
+    transform: rotate(45deg);
+}
+.hamRotate180.active {
+    transform: rotate(180deg);
+}
+
+.ham1 .top {
+    stroke-dasharray: 40 139;
+}
+.ham1 .bottom {
+    stroke-dasharray: 40 180;
+}
+.ham1.active .top {
+    stroke-dashoffset: -98px;
+}
+.ham1.active .bottom {
+    stroke-dashoffset: -138px;
+}
+.line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #fff;
+    stroke-width:3.5;
+    stroke-linecap:round;
+}
+
+/*
+ main body 
+*/
+.page-wrapper {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    box-shadow: -10px 0px 50px 0px rgba(0,0,0,0.1);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    padding-left: 20%;
+}
+/*
+    helper classes
+*/
+.section {
+    padding: 50px 30px;
+    position: relative;
+    background-color: #101010;
+}
+.section-head {
+    position: relative;
+    margin-bottom: 40px;
+}
+.section-head h2 {
+    font-size: 30px;
+    z-index: 1;
+    text-transform: capitalize;
+    display: block;
+    width: 100%;
+    font-weight: 500;
+}
+.about-desc h1 {
+    font-size: 32px;
+}
+.about-desc h3 {
+    font-size: 18px;
+    line-height: 32px;
+    margin: 0 auto;
+}
+.about-desc-info {
+    padding-bottom: 20px;
+    font-size: 16px;
+}
+
+.about-desc-info b {
+    padding-right: 10px;
+}
+
+.about-desc-info span, 
+.about-desc-info a {
+    font-size: 16px;
+    color: #8a8787;
+}
+/*
+    skills
+*/
+.progress-bar {
+    opacity: 0.8;
+}
+
+.progress {
+    height: 3px;
+    background: #dcdcdc;
+}
+
+/*
+    my education and my experience
+*/
+.b-box{
+    border: 1px solid rgba(166, 175, 189, 0.3);
+}
+
+
+/*
+    responsive view
+*/
+@media (max-width: 991px) {
+
+    .container {
+        max-width: 100%;
+    }
+
+    .aside {
+        left: -85%;
+        width: 100%;
+        max-width: 270px;
+    }
+
+    .aside.aside-open  {
+        left: 0;
+    }
+
+    .aside-banner {
+        height: 500px;
+        width: 100%;
+        position: relative;
+    }
+
+    .nav-wrapper .navbar-toggler {
+        display: block;
+    }
+
+    .page-wrapper {
+        width: 100%;
+        padding-left: 0%;
+        border-radius: 0;
+        margin-top: 0;
+    }
+    .section {
+        padding: 50px 10px;
+        position: relative;
+        background-color: #101010;
+    }
+}
