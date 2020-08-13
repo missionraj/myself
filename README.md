@@ -1,2 +1,2 @@
 # myself
-this is the portfolio currently is being little developed it is some kind of template
+this is my portfolio build on html,css,javascript and jquery
