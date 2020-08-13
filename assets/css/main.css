@@ -240,6 +240,7 @@ a:active {
     padding: 50px 30px;
     position: relative;
     background-color: #101010;
+    height: 100vh;
 }
 .section-head {
     position: relative;
@@ -319,7 +320,6 @@ a:active {
         width: 100%;
         position: relative;
     }
-
     .nav-wrapper .navbar-toggler {
         display: block;
     }
