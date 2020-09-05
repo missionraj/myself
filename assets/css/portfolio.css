@@ -1,0 +1,10 @@
+
+.portfolio__projectContainer{
+    display: flex;  
+    flex-wrap: wrap;  
+}
+.portfolio__project{
+    min-width: 280px;
+    margin : 10px;
+    flex-basis: 45%;
+}
