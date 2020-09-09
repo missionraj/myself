@@ -18,8 +18,69 @@
     font-size : 20px;
     font-weight: 500;
     color:#fff;
+    cursor: pointer;
 }
 .portfolio__projects { 
+    display: flex;   
+    flex-wrap: wrap;
+    padding:  1.25em 0.50em;
+    justify-content: space-around;
+}
+
+.portfolio__projectsItem {
+    width: 30%;
+    min-width: 200px; 
+    border: 1px solid rgba(166, 175, 189, 0.3);
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+.portfolio__projectsItem > img {
+    width: 100%;
+    object-fit: contain;
+    height: 215px;
+}
+.portfolio__projectsItem > div { 
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    width: 100%;
+}
+.modal { 
+    background: #101010;
+    padding: 1em;
+}
+
+.modal__title { 
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+.modal__description {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+}
+.modal__projectElements{
     display: flex;
-    
+    padding : 10px 0px;
+}
+.modal__projectElements > div { 
+    width: 50%;
+    color: #fff;
+    font-weight: 400;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 14px;
+}
+.modal__project { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal__project > img{ 
+    max-width: 100%;
+    object-fit: contain;
 }
