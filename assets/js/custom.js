@@ -41,6 +41,16 @@ let allProjects = [
                 img:"assets/images/spotify.jpg",
                 projectLink:"https://spotify-clone-b0859.web.app/"
         }
+    },
+    {
+        technology:'reactjs',
+        project : {
+                title:'whatsapp clone',
+                description:'this is whatsapp desktop copy which has functionality of creating public rooms and send text messages realtime that is stored in mongodb databse ',
+                technology: 'Reactjs, Html, Css, firebase, Expressjs, Nodejs, MongoDb, pusherjs',
+                img:"assets/images/whatsapp.png",
+                projectLink:"https://whatsapp-clone-d0426.web.app/"
+        }
     }
 ]
 
